@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice Command Shopping Assistant</title>
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="./styles/main.css" />
+
+
+</head>
+<body>
+  <!-- ===============================
+       HEADER / INTRO SECTION
+  ================================ -->
+  <div class="container">
+    <h1>🛒 Voice Shopping Assistant</h1>
+    <p>Speak your shopping needs, we'll handle the rest!</p>
+
+    <!-- Language Selector (Multilingual Support) -->
+    <div class="language">
+      <select id="languageSelect">
+        <option>English (US)</option>
+        <option>Hindi</option>
+        <option>French</option>
+      </select>
+    </div>
+
+    <!-- Main Microphone Button -->
+    <!-- This is the primary action button, bigger than others -->
+    <div class="mic-container">
+      <button class="btn speak" id="micBtn">🎤 Click to Speak</button>
+    </div>
+
+    <!-- Secondary Utility Buttons -->
+    <!-- Test Mic: quickly checks mic input
+         Debug Info: shows app/browser debugging details -->
+    <div class="btn-group">
+      <button class="btn secondary">Test Mic</button>
+      <button class="btn secondary">Debug Info</button>
+    </div>
+  </div>
+
+  <!-- ===============================
+       MAIN APP SECTIONS
+  ================================ -->
+
+  <!-- Shopping List Section -->
+  <div class="section">
+    <h2>📋 Shopping List</h2>
+    <ul id="shopping-list"></ul> <!-- Items added via voice will appear here -->
+  </div>
+
+  <!-- Smart Suggestions Section -->
+  <div class="section">
+    <h2>💡 Smart Suggestions</h2>
+    <div id="smart-suggestions"></div> <!-- Recommended/seasonal/substitute items -->
+  </div>
+
+  <!-- Product Search Section -->
+  <div class="section">
+    <h2>🔍 Product Search</h2>
+    <div id="find-results"></div> <!-- Results of "Find ..." voice queries -->
+  </div>
+
+  <!-- ===============================
+       HELP / TROUBLESHOOTING FOOTER
+  ================================ -->
+  <footer>
+    <!-- Collapsible "Voice Not Working?" help guide -->
+    <details>
+      <summary>⚙️ Voice Not Working?</summary>
+      <ul>
+        <li>Use Chrome or Edge browser</li>
+        <li>Allow microphone access when prompted</li>
+        <li>Speak clearly and wait for "Listening..."</li>
+        <li>Check browser console for errors</li>
+        <li>Ensure stable internet connection</li>
+      </ul>
+    </details>
+  </footer>
+
+  <!-- ===============================
+       JAVASCRIPT FILE
+       Handles speech recognition & logic
+  ================================ -->
+  <script src="./script.js" defer></script>
+</body>
+</html>

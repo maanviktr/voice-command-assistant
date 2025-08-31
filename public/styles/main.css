@@ -1,0 +1,194 @@
+/* ===============================
+   FONT IMPORT
+   =============================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* ===============================
+   BASE STYLES
+   =============================== */
+body {
+  font-family: 'Poppins', sans-serif;       /* Clean modern font */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark gradient background */
+  color: #f1f1f1;
+  margin: 0;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* Centered container for header & intro */
+.container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+/* ===============================
+   LANGUAGE SELECTOR
+   =============================== */
+.language {
+  margin-bottom: 1rem;
+}
+
+.language select {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* ===============================
+   BIG MIC BUTTON (Main Action)
+   =============================== */
+.mic-container {
+  margin: 1.5rem 0;
+}
+
+.btn.speak {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Gradient red/pink */
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px; /* Pill-shaped */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 77, 109, 0.6);
+}
+
+.btn.speak:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Glow animation when mic is active */
+.btn.speak.active {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 77, 109, 0.7); }
+  70% { box-shadow: 0 0 0 25px rgba(255, 77, 109, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 77, 109, 0); }
+}
+
+/* ===============================
+   SECONDARY BUTTONS
+   =============================== */
+.btn-group {
+  margin-top: 1rem;
+}
+
+.btn.secondary {
+  background: rgba(255,255,255,0.1);
+  color: #eee;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0.3rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn.secondary:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* ===============================
+   APP SECTIONS (Glassy Boxes)
+   =============================== */
+.section {
+  background: rgba(255, 255, 255, 0.08); /* Glassy effect */
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px); /* Frosted glass blur */
+  max-width: 800px;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #ffdfdf; /* Soft pinkish heading */
+}
+
+/* ===============================
+   SHOPPING LIST
+   =============================== */
+ul#shopping-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul#shopping-list li {
+  background: rgba(255, 255, 255, 0.12);
+  margin: 0.4rem 0;
+  padding: 0.8rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* ===============================
+   SUGGESTIONS & SEARCH RESULTS
+   =============================== */
+#smart-suggestions, #find-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem; /* Space between cards */
+}
+
+/* Card style for suggestions & search results */
+.card {
+  background: rgba(255,255,255,0.12);
+  padding: 1rem;
+  border-radius: 12px;
+  color: #eee;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px); /* Floating effect */
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ===============================
+   FOOTER (HELP SECTION)
+   =============================== */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #ccc;
+}
+
+details {
+  background: rgba(255,255,255,0.05);
+  padding: 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+details summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+details ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+  text-align: left;
+}
